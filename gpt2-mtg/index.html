@@ -149,7 +149,7 @@
                   </div>
             <div class="buttons">
               <span class="control">
-                <button type="submit" name="submit" id="generate-text" class="button is-link">
+                <button type="submit" name="submit" id="generate-text" class="button is-link" disabled>
                   <span class="icon">
                     <i class="fas fa-md fa-pen"></i>
                   </span><span>Generate a Card!</span></button>
@@ -206,7 +206,7 @@
       for (x = 0; x < iters; x++) {
       $.ajax({
         type: "POST",
-        url: "https://gpt2-mtg-dstdu4u23a-uc.a.run.app/",
+        url: "",
         dataType: "json",
         data: JSON.stringify(getInputValues()),
         success: function (data) {
