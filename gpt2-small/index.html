@@ -110,7 +110,8 @@
               <div class="control">
                 <textarea id="prefix" class="textarea" type="text" placeholder="Donald Trump" rows="2"></textarea>
               </div>
-              <p class="help">Starts the generated text with the specified text. <em>(Optional: max 500 characters)</em></p>
+              <p class="help">Starts the generated text with the specified text. <em>(Optional: max 500 characters)</em>
+              </p>
             </div>
             <div class="field">
               <label class="label">Generated Text Length</label>
@@ -137,8 +138,10 @@
                   disable)</em></p>
             </div>
             <div class="buttons">
+              <p style="color: red;">(This app is currently disabled while I try to figure out why it keeps failing.
+                Sorry! :( )</p>
               <span class="control">
-                <button type="submit" name="submit" id="generate-text" class="button is-link">
+                <button type="submit" name="submit" id="generate-text" class="button is-link" disabled>
                   <span class="icon">
                     <i class="fas fa-md fa-pen"></i>
                   </span><span>Generate Text!</span></button>
@@ -157,14 +160,16 @@
               <button id="clear-text" class="button is-danger">
                 <span class="icon">
                   <i class="fas fa-md fa-trash-alt"></i>
-                </span><span>Clear Texts</span</button> </span> </div> </div> <div id="model-output" class="column">
-                  <p id="tutorial" class="subtitle"><em>Generated text will appear here!
-                      Use the form to configure GPT-2 and press <strong>Generate Text</strong>
-                      to get your own text!
-                    </em></p>
-          </div>
+                </span><span>Clear Texts</span< /button> </span> </div>
+        </div>
+        <div id="model-output" class="column">
+          <p id="tutorial" class="subtitle"><em>Generated text will appear here!
+              Use the form to configure GPT-2 and press <strong>Generate Text</strong>
+              to get your own text!
+            </em></p>
         </div>
       </div>
+    </div>
 
 
   </section>
@@ -197,7 +202,7 @@
       e.preventDefault();
       $.ajax({
         type: "POST",
-        url: "https://gpt2-default-dstdu4u23a-uc.a.run.app",
+        url: "",
         dataType: "json",
         data: JSON.stringify(getInputValues()),
         beforeSend: function (data) {
